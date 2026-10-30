@@ -78,7 +78,7 @@ export function OrderSuccess({ order, onOrderAnother }) {
   const currentStepIndex = steps.findIndex((s) => s.key === currentStatus);
 
   const handleCopyTicket = () => {
-    const text = `LunchLine Order #${displayOrderNum} | Slot: ${order.pickup_slot} | ${order.student_name} (${order.student_class})`;
+    const text = `LunchLine Order #${displayOrderNum} | Slot: ${order.pickup_slot} | ${order.student_name} (${order.student_class})\nPickup & Track: https://quickbite-orpin-tau.vercel.app/`;
     navigator.clipboard?.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
